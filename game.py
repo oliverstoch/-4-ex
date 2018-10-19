@@ -237,7 +237,12 @@ def is_valid_exit(exits, user_input):
     >>> is_valid_exit(rooms["Parking"]["exits"], "east")
     True
     """
+
+  
     
+    if user_input[0:2]==('go'):
+       user_input =user_input[3:]
+  
 
     if user_input in exits:
         return True
@@ -303,7 +308,9 @@ def move(exits, direction):
     >>> move(rooms["Reception"]["exits"], "west") == rooms["Office"]
     False
     """
-    
+    if direction[0:2]==('go'):
+       direction =direction[3:]
+
     room = rooms[exits[direction]]
     return room
 #if move(rooms["Reception"]["exits"], "south") == rooms["Admins"]:
