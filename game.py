@@ -239,16 +239,16 @@ def is_valid_exit(exits, user_input):
     """
 
   
-    
-    if user_input[0:2]==('go'):
-       user_input =user_input[3:]
+    return user_input in exits\
+    #if user_input[0:2]==('go'):
+       #user_input =user_input[3:]
   
 
-    if user_input in exits:
-        return True
-    else:
-        print('not a valid exit')
-        return False
+    #if user_input in exits:
+        #return True
+    #else:
+        #print('not a valid exit')
+        #return False
 
 
 
